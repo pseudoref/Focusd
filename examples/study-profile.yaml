@@ -1,0 +1,11 @@
+name: study
+description: Minimal study profile
+block:
+  - youtube.com
+  - reddit.com
+apps:
+  - "firefox --new-window https://en.wikipedia.org/wiki/"
+  - "code"
+hooks:
+  pre: "./hooks/pre_switch.sh"
+  post: ".hooks/post_switch.py"
