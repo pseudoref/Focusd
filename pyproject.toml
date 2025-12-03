@@ -1,0 +1,15 @@
+[project]
+name = "focusd"
+version = "0.0.0"
+description = "Linux profile switcher and productivity daemon"
+requires-python = ">=3.11"
+
+[project dependencies]
+typer = "*"
+rich = "*"
+pyyaml = "*"
+psutil = "*"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
