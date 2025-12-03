@@ -1,15 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "focusd"
-version = "0.0.0"
-description = "Linux profile switcher and productivity daemon"
-requires-python = ">=3.11"
+version = "0.1.0"
+description = "Linux-first productivity framework (CLI + system profiles + daemon)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "typer[all]",
+    "rich",
+    "pyyaml"
+]
 
-[project dependencies]
-typer = "*"
-rich = "*"
-pyyaml = "*"
-psutil = "*"
+[project.scripts]
+focusd = "focusd.cli:main"
 
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+[tool.setuptools.packages.find]
+where = ["src"]
+

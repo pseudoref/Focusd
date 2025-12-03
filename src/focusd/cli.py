@@ -29,5 +29,6 @@ def block(action: str, host: str):
     manager.modify_block(action, host)
     console.print(f"{action} {host}")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app()
+

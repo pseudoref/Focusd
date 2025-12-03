@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: focusd
+Version: 0.1.0
+Summary: Linux-first productivity framework (CLI + system profiles + daemon)
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: typer[all]
+Requires-Dist: rich
+Requires-Dist: pyyaml
+Dynamic: license-file
