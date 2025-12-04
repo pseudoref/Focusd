@@ -1,0 +1,10 @@
+apps:
+  start:
+    - "firefox"
+    - "tmux"
+  stop:
+    - "discord"
+web_block:
+  - "instagram.com"
+cpu_governor: "powersave"
+wallpaper: "home/paras/focusd/wallpapers/studytime.jpeg"

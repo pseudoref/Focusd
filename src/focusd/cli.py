@@ -2,6 +2,7 @@ import typer
 from rich.console import Console
 from pathlib import Path
 from .manager import ProfileManager
+from .switcher import switch_profile
 
 app = typer.Typer()
 console = Console()
@@ -9,7 +10,6 @@ manager = ProfileManager()
 
 @app.command()
 def switch(profile: str):
-    """Switch to a named profile (from profiles/ or a yaml path)."""
     console.print(f"[bold]Switching to:[/] {profile}")
     manager.switch(profile)
 
@@ -28,6 +28,10 @@ def block(action: str, host: str):
         raise typer.BadParameter("action must be add or remove")
     manager.modify_block(action, host)
     console.print(f"{action} {host}")
+
+@app.command()
+def switch(profile: str):
+    switch_profile(profile)
 
 if __name__ == "__main__":
     app()

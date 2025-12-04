@@ -23,7 +23,6 @@ class ProfileManager:
         return {"profiles_dir": str(self.profiles_dir)}
 
     def timer(self, duration: str):
-        # simple stub; real timer lives in daemon in later phases
         print("Timer stub:", duration)
 
     def modify_block(self, action: str, host: str):

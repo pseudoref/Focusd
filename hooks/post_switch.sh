@@ -1,2 +1,2 @@
-#!/usr/bin/env python3
-print("post-switch hook ran")
+#!/bin/bash
+echo "[focusd] Running post-switch hook..."
